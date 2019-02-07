@@ -70,6 +70,7 @@ coverage.xml
 *.mo
 
 # Django stuff:
+mysite/settings_secret.py
 *.pyc
 *~
 __pycache__
