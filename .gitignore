@@ -70,6 +70,13 @@ coverage.xml
 *.mo
 
 # Django stuff:
+*.pyc
+*~
+__pycache__
+myvenv
+db.sqlite3
+/static
+.DS_Store
 
 # Flask stuff:
 instance/
