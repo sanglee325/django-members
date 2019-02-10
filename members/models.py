@@ -1,8 +1,6 @@
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
-
 class Person(models.Model):
     name = models.CharField(max_length=20)
     student_number = models.CharField(max_length=10)
@@ -13,7 +11,7 @@ class Person(models.Model):
     SEX_CHOICES = (
         ('M', 'Male'),
         ('F', 'Female'),
-        ('X', 'Uncheck')
+        ('X', '---')
     )
     joined_date = models.DateTimeField(default=timezone.now)
     sex = models.CharField(max_length=1, choices=SEX_CHOICES, default='X')
