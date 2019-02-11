@@ -6,5 +6,5 @@ def index(request):
     return redirect('member')
 
 def member(request):
-    member = Person.objects.all()
+    member = Person.objects.all().order_by('student_number')
     return render(request, 'members/list.html', {'member': member})

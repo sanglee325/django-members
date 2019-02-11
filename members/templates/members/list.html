@@ -31,7 +31,7 @@
         <div class="row member-row justify-content-center">
             <div class="member-front col-11 col-md-8">
                 <h1 class="member-title"><span>Release</span> Members </h1>
-                <p class="member-subtitle">Est.2009</p>
+                <p class="member-subtitle">Est.2014</p>
                 <p class="member-copy">Release Members in 2019: 여러분께 Release 회원들을 소개합니다.</p>
             </div>
             <div class="member-back">
@@ -47,10 +47,20 @@
             {% for student in member %}
                 <div class="col-10 col-md-4 list-box">
                     <h1 class="list-box-name">{{ student.name }}</h1>
-                    <p class="list-box-data">Joined : {{ student.joined_date|date:"Y-m-d" }}</p>
-                    <p class="list-box-data">Birthday : {{ student.birthday|date:"m/d" }}</p>
-                    <p class="list-box-data">Email : {{ student.email }}</p>
-                    <a href="{{ student.github }}" class="list-box-link">{{ student.github }}</a>
+                    <p class="list-box-data">Joined : {{ student.joined_date|date:"y/m/d" }}</p>
+                    <p class="list-box-data">Birthday : {{ student.birthday|date:"y/m/d" }}</p>
+                    <p class="list-box-data"> 
+                        <a href="malito:{{ student.email }}">
+                        <img class="list-fav-img" src="{% static 'email-fav-16.png' %}">
+                        {{ student.email }}
+                        </a>
+                    </p>
+                    <p>
+                        <a href="{{ student.github }}" class="list-box-link">
+                        <img class="list-fav-img" src="{% static 'github-fav-16.png' %}">
+                        {{ student.github }}
+                        </a>
+                    </p>
                 </div>
             {% endfor %}
         </div>
