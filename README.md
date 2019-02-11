@@ -1,3 +1,3 @@
-# Lab Management for Sogang CSE Students!
+# Lab and Members Management for Sogang CSE Students!
 
-### Developed for systematic manage of lab AS1016 and R912
+### Developed for systematic manage of Release
