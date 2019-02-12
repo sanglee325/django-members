@@ -12,6 +12,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <script type='application/javascript' src='/path/to/fastclick.js'></script>
 
     <link rel="stylesheet" type="text/css" href="{% static 'members/index.css' %}">
@@ -50,16 +53,13 @@
                     <p class="list-box-data">Joined : {{ member.joined_date|date:"y/m/d" }}</p>
                     <p class="list-box-data">Birthday : {{ member.birthday|date:"y/m/d" }}</p>
                     <p class="list-box-data"> 
-                        <a href="malito:{{ member.email }}">
-                        <img class="list-fav-img" src="{% static 'email-fav-16.png' %}">
-                        {{ member.email }}
-                        </a>
-                    </p>
-                    <p>
-                        <a href="{{ member.github }}" class="list-box-link">
-                        <img class="list-fav-img" src="{% static 'github-fav-16.png' %}">
-                        {{ member.github }}
-                        </a>
+												<a href="malito:{{ member.email }}">
+														<i class="fas fa-envelope mr-2"></i>{{ member.email }}
+												</a>
+										</p>
+												<a href="{{ member.github }}" class="list-box-link">
+														<i class="fab fa-github mr-2"></i>{{ member.github }}
+												</a>
                     </p>
                 </div>
             {% endfor %}
