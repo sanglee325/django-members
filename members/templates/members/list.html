@@ -30,40 +30,39 @@
             </a>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="row member-row justify-content-center">
-            <div class="member-front col-11 col-md-8">
-                <h1 class="member-title"><span>Release</span> Members </h1>
-                <p class="member-subtitle">Est.2014</p>
-                <p class="member-copy">Release Members in 2019: 여러분께 Release 회원들을 소개합니다.</p>
-            </div>
-            <div class="member-back">
-                <img class="member-back-img" src="{% static 'mbackground.jpg' %}">
-            </div>
-        </div>
-        <div class="row list-row justify-content-center">
-            <div class="col-11 col-md-8">
-                <h1 class="col-header">Our Members</h1>
-            </div>
-        </div>
-        <div class="row list-row justify-content-center">
-            {% for member in members %}
-                <div class="col-10 col-md-4 list-box">
-                    <h1 class="list-box-name">{{ member.name }}</h1>
-                    <p class="list-box-data">Joined : {{ member.joined_date|date:"y/m/d" }}</p>
-                    <p class="list-box-data">Birthday : {{ member.birthday|date:"y/m/d" }}</p>
-                    <p class="list-box-data"> 
-												<a href="malito:{{ member.email }}">
-														<i class="fas fa-envelope mr-2"></i>{{ member.email }}
-												</a>
+		<div class="hero-container" style="background-image: {% static 'mbackground.jpg' %};">
+				<div class="container hero-content">
+						<h1 class="member-title"><span>Release</span> Members </h1>
+						<p class="member-subtitle">Est.2014</p>
+						<p class="member-copy">Release Members in 2019: 여러분께 Release 회원들을 소개합니다.</p>
+				</div>
+				<div class="hero-background-container">
+						<img class="hero-background" src="{% static 'mbackground.jpg' %}">
+				</div>
+		</div>
+		<div class="list-container p-4">
+				<div class="container">
+						<h1 class="col-header">Our Members</h1>
+						<div class="row list-row">
+								{% for member in members %}
+								<div class="col-12 col-md-5 list-box">
+										<h1 class="list-box-name">{{ member.name }}</h1>
+										<p class="list-box-data">Joined : {{ member.joined_date|date:"y/m/d" }}</p>
+										<p class="list-box-data">Birthday : {{ member.birthday|date:"y/m/d" }}</p>
+										<p class="list-box-data"> 
+										<a href="malito:{{ member.email }}">
+											<i class="fas fa-envelope mr-2"></i>{{ member.email }}
+										</a>
 										</p>
-												<a href="{{ member.github }}" class="list-box-link">
-														<i class="fab fa-github mr-2"></i>{{ member.github }}
-												</a>
-                    </p>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
+										<p class="list-box-data"> 
+										<a href="{{ member.github }}" class="list-box-link">
+											<i class="fab fa-github mr-2"></i>{{ member.github }}
+										</a>
+										</p>
+								</div>
+								{% endfor %}
+						</div>
+				</div>
+		</div>
 </body>
 </html>
