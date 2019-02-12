@@ -1,3 +1,3 @@
-# Lab and Members Management for Sogang CSE Students!
+# Members Management for Sogang CSE Students!
 
 ### Developed for systematic manage of Release
