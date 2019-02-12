@@ -44,21 +44,21 @@
             </div>
         </div>
         <div class="row list-row justify-content-center">
-            {% for student in member %}
+            {% for member in members %}
                 <div class="col-10 col-md-4 list-box">
-                    <h1 class="list-box-name">{{ student.name }}</h1>
-                    <p class="list-box-data">Joined : {{ student.joined_date|date:"y/m/d" }}</p>
-                    <p class="list-box-data">Birthday : {{ student.birthday|date:"y/m/d" }}</p>
+                    <h1 class="list-box-name">{{ member.name }}</h1>
+                    <p class="list-box-data">Joined : {{ member.joined_date|date:"y/m/d" }}</p>
+                    <p class="list-box-data">Birthday : {{ member.birthday|date:"y/m/d" }}</p>
                     <p class="list-box-data"> 
-                        <a href="malito:{{ student.email }}">
+                        <a href="malito:{{ member.email }}">
                         <img class="list-fav-img" src="{% static 'email-fav-16.png' %}">
-                        {{ student.email }}
+                        {{ member.email }}
                         </a>
                     </p>
                     <p>
-                        <a href="{{ student.github }}" class="list-box-link">
+                        <a href="{{ member.github }}" class="list-box-link">
                         <img class="list-fav-img" src="{% static 'github-fav-16.png' %}">
-                        {{ student.github }}
+                        {{ member.github }}
                         </a>
                     </p>
                 </div>
